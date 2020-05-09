@@ -6,7 +6,7 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
   styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent implements AfterViewInit {
-  @ViewChild('graphContainer', { static: false }) containerElementRef: ElementRef;
+  @ViewChild('graphContainer') containerElementRef: ElementRef;
 
   get container() {
     return this.containerElementRef.nativeElement;
