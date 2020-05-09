@@ -25,9 +25,9 @@ export class DemoComponent implements AfterViewInit {
     // Adds cells to the model in a single step
     graph.getModel().beginUpdate();
     try {
-      const v1 = graph.insertVertex(parent, null, 'Hello,', 20, 150, 80, 30);
-      const v2 = graph.insertVertex(parent, null, 'World!', 200, 150, 80, 30);
-      const e1 = graph.insertEdge(parent, null, '', v1, v2);
+      const helloBlock = graph.insertVertex(parent, null, "Hello,", 20, 150, 80, 30);
+      const worldBlock = graph.insertVertex(parent, null, "World!", 200, 150, 80, 30);
+      graph.insertEdge(parent, null, "", helloBlock, worldBlock);
     }
     finally {
       // Updates the display
